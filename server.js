@@ -11,9 +11,7 @@ require('dotenv').load();
 
 mongoose.connect(process.env.MONGO_URI);
 
-app.use('/controllers', express.static(process.cwd() + '/app/controllers'));
 app.use('/', express.static(process.cwd() + '/public'));
-app.use('/common', express.static(process.cwd() + '/app/common'));
 
 //app.use(session({
 //	secret: 'secretClementine',
